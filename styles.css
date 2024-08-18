@@ -91,10 +91,7 @@ nav {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: var(--white);
     text-align: center;
-    min-height: 60vh; /* Adjusted height */
-    background-image: url('pattern.png'), linear-gradient(135deg, var(--primary-color) 60%, var(--secondary-color) 100%);
-    background-size: cover;
-    background-blend-mode: overlay;
+    min-height: 60vh;
 }
 
 .hero-content {
@@ -125,36 +122,12 @@ nav {
     background: var(--secondary-color);
 }
 
-/* Other Sections (About, Projects, etc.) */
-/* ... same as before, adjusted for new design consistency ... */
-
-/* Footer */
-footer {
-    background: var(--primary-color);
-    color: var(--white);
+/* Section Titles */
+h2 {
     text-align: center;
-    padding: 20px;
-    margin-top: auto;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .hero-content h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero-content p {
-        font-size: 1rem;
-    }
-
-    .content-section {
-        padding: 60px 20px;
-    }
-
-    .cta-button {
-        font-size: 1rem;
-        padding: 10px 24px;
-    }
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    color: var(--primary-color);
 }
 
 /* About Us Section */
@@ -162,7 +135,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 80px 20px;
+    padding: 60px 20px;
     background: var(--background-color);
     text-align: center;
 }
@@ -175,42 +148,36 @@ footer {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.about-card h2 {
-    font-size: 2rem;
-    margin-bottom: 15px;
-}
-
-.about-card p {
-    font-size: 1.15rem;
-    line-height: 1.6;
-}
-
 /* Our Projects Section */
+#projects {
+    background: var(--white); /* Edge-to-edge background */
+    padding: 60px 0; /* No padding on sides for full-width background */
+}
+
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-    padding: 40px 20px;
-    background: var(--white);
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto; /* Center content */
+    padding: 0 20px; /* Padding for inner content */
 }
 
 .project-item {
     background: var(--background-color);
-    border-radius: 15px;
+    border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     overflow: hidden;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .project-item img {
-    width: 100%;       /* Ensures the image takes the full width of its container */
-    height: 200px;     /* Fixed height for consistency across all project images */
-    object-fit: cover; /* Maintains aspect ratio and crops excess parts */
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
     border-bottom: 4px solid var(--primary-color);
-    border-radius: 10px 10px 0 0; /* Rounded corners at the top */
+    border-radius: 10px 10px 0 0;
 }
-
-
 
 .project-content {
     padding: 20px;
@@ -256,6 +223,7 @@ footer {
     justify-content: space-around;
     padding: 40px 20px;
     background: var(--background-color);
+    margin-bottom: 20px;
 }
 
 .stat-item {
@@ -331,8 +299,7 @@ footer {
     background: var(--primary-color);
     color: var(--white);
     text-align: center;
-    padding: 20px;
-    margin-top: auto;
+    padding: 30px 20px;
 }
 
 /* Responsive Design */
@@ -358,7 +325,7 @@ footer {
 
 img {
     max-width: 100%;
-    max-height: 500px; /* Prevents large images from overflowing */
-    object-fit: cover; /* Maintains aspect ratio and covers the area */
+    max-height: 500px;
+    object-fit: cover;
     border-radius: 10px;
 }
