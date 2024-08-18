@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kenhejo Studio - Independent game development studio specializing in immersive roleplaying experiences on Roblox.">
+    <meta name="keywords" content="Kenhejo Studio, game development, Roblox, roleplay games, indie games">
+    <title>Kenhejo Studio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="logo.png" alt="Kenhejo Studio Logo">
+                <span class="logo-text">Kenhejo Studio</span> <!-- Added Logo Text -->
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#stats">Stats</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span class="material-icons">menu</span>
+            </button>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <h1>Kenhejo Studio</h1> <!-- Added Studio Name -->
+                <p>Crafting immersive roleplaying experiences on Roblox.</p>
+                <a href="#projects" class="cta-button">Explore Our Projects</a>
+            </div>
+        </section>    
+
+        <section id="about" class="content-section centered-section">
+            <div class="about-card">
+                <h2>About Us</h2>
+                <p>Kenhejo Studio is a passionate group of developers dedicated to creating unique and engaging roleplay games on Roblox. Our goal is to bring players together through immersive worlds and captivating stories.</p>
+            </div>
+        </section>        
+
+        <section id="projects" class="content-section">
+            <div class="content-container">
+                <h2>Our Projects</h2>
+                <div class="project-grid">
+                    <div class="project-item">
+                        <img src="tmp.jpg" alt="Roleplay Game Screenshot">
+                        <div class="project-content">
+                            <h3>Roleplay Game</h3>
+                            <p>Dive into a rich and detailed world on Roblox. Build your story, create your character, and embark on epic adventures with friends.</p>
+                            <a href="#" class="cta-button">Learn More</a>
+                        </div>
+                    </div>
+                    <!-- Add more project-item divs as needed -->
+                </div>
+            </div>
+        </section>        
+
+        <section id="stats" class="content-section alt-bg">
+            <div class="content-container">
+                <h2>Game Stats</h2>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <h3>1M+</h3>
+                        <p>Players</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>500K+</h3>
+                        <p>Daily Active Users</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>100K+</h3>
+                        <p>Community Members</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>5K+</h3>
+                        <p>Positive Reviews</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="content-section">
+            <div class="content-container">
+                <h2>Contact Us</h2>
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="4" placeholder="Message" required></textarea>
+                    </div>
+                    <button type="submit" class="cta-button">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Kenhejo Studio. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+
+            menuToggle.addEventListener('click', function() {
+                navLinks.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>
