@@ -1,331 +1,125 @@
-/* General Styles */
-body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #1a1a1a;
-    background-color: #f4f4f4;
-    overflow-x: hidden;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kenhejo Studio - Independent game development studio specializing in immersive roleplaying experiences on Roblox.">
+    <meta name="keywords" content="Kenhejo Studio, game development, Roblox, roleplay games, indie games">
+    <title>Kenhejo Studio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="logo.png" alt="Kenhejo Studio Logo">
+                <span class="logo-text">Kenhejo Studio</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#stats">Stats</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span class="material-icons">menu</span>
+            </button>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <h1>Kenhejo Studio</h1>
+                <p>Crafting immersive roleplaying experiences on Roblox.</p>
+                <a href="#projects" class="cta-button">Explore Our Projects</a>
+            </div>
+        </section>    
 
-/* Color Palette */
-:root {
-    --primary-color: #6c63ff;
-    --secondary-color: #32e875;
-    --accent-color: #ff8a65;
-    --text-color: #1a1a1a;
-    --background-color: #f4f4f4;
-    --white: #ffffff;
-}
+        <section id="about" class="content-section centered-section">
+            <div class="about-card">
+                <h2>About Us</h2>
+                <p>Kenhejo Studio is a passionate group of developers dedicated to creating unique and engaging roleplay games on Roblox. Our goal is to bring players together through immersive worlds and captivating stories.</p>
+            </div>
+        </section>        
 
-/* Header and Navigation */
-header {
-    background: #fff;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
+        <section id="projects" class="content-section">
+            <h2>Our Projects</h2>
+            <div class="project-grid">
+                <div class="project-item">
+                    <img src="tmp.jpg" alt="San Tanoshi Screenshot">
+                    <div class="project-content">
+                        <h3>San Tanoshi</h3>
+                        <p>Dive into a rich and detailed world on Roblox. Build your story, create your character, and embark on epic adventures with friends.</p>
+                        <a href="#" class="cta-button">Learn More</a>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <img src="tba.png" alt="TBA">
+                    <div class="project-content">
+                        <h3>TBA</h3>
+                        <p>Exciting new project coming soon. Stay tuned!</p>
+                        <a href="#" class="cta-button">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>            
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
-}
+        <section id="stats" class="content-section alt-bg">
+            <h2>Game Stats</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>1M+</h3>
+                    <p>Players</p>
+                </div>
+                <div class="stat-item">
+                    <h3>500K+</h3>
+                    <p>Daily Active Users</p>
+                </div>
+                <div class="stat-item">
+                    <h3>100K+</h3>
+                    <p>Community Members</p>
+                </div>
+                <div class="stat-item">
+                    <h3>5K+</h3>
+                    <p>Positive Reviews</p>
+                </div>
+            </div>
+        </section>
 
-.logo {
-    display: flex;
-    align-items: center;
-}
+        <section id="contact" class="content-section">
+            <h2>Contact Us</h2>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder="Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" rows="4" placeholder="Message" required></textarea>
+                </div>
+                <button type="submit" class="cta-button">Send Message</button>
+            </form>
+        </section>
+    </main>
 
-.logo img {
-    height: 40px;
-    margin-right: 10px;
-}
+    <footer>
+        <p>&copy; 2024 Kenhejo Studio. All rights reserved.</p>
+    </footer>
 
-.logo-text {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #333;
-}
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    margin: 0;
-}
-
-.nav-links a {
-    color: #333;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 1rem;
-    transition: color 0.3s;
-}
-
-.nav-links a:hover {
-    color: var(--primary-color);
-}
-
-.menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 2rem;
-    cursor: pointer;
-    color: #333;
-}
-
-/* Hero Section */
-.hero-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 100px 20px;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    color: var(--white);
-    text-align: center;
-    min-height: 60vh;
-}
-
-.hero-content {
-    max-width: 600px;
-}
-
-.hero-content h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-}
-
-.hero-content p {
-    font-size: 1.25rem;
-    margin-bottom: 30px;
-}
-
-.hero-content .cta-button {
-    background: var(--accent-color);
-    color: var(--white);
-    padding: 14px 36px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: background 0.3s;
-}
-
-.hero-content .cta-button:hover {
-    background: var(--secondary-color);
-}
-
-/* Section Titles */
-h2 {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 2.5rem;
-    color: var(--primary-color);
-}
-
-/* About Us Section */
-.centered-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 60px 20px;
-    background: var(--background-color);
-    text-align: center;
-}
-
-.about-card {
-    max-width: 800px;
-    background: var(--white);
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-/* Our Projects Section */
-#projects {
-    background: var(--white); /* Edge-to-edge background */
-    padding: 60px 0; /* No padding on sides for full-width background */
-}
-
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto; /* Center content */
-    padding: 0 20px; /* Padding for inner content */
-}
-
-.project-item {
-    background: var(--background-color);
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.project-item img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-bottom: 4px solid var(--primary-color);
-    border-radius: 10px 10px 0 0;
-}
-
-.project-content {
-    padding: 20px;
-    text-align: center;
-}
-
-.project-item h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    color: var(--primary-color);
-}
-
-.project-item p {
-    font-size: 1rem;
-    color: #555;
-    margin-bottom: 15px;
-}
-
-.project-item .cta-button {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 20px;
-    background: var(--secondary-color);
-    color: var(--white);
-    border-radius: 30px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: background 0.3s;
-}
-
-.project-item .cta-button:hover {
-    background: var(--accent-color);
-}
-
-.project-item:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-}
-
-/* Stats Section */
-.stats-grid {
-    display: flex;
-    justify-content: space-around;
-    padding: 40px 20px;
-    background: var(--background-color);
-    margin-bottom: 20px;
-}
-
-.stat-item {
-    text-align: center;
-    background: var(--white);
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    flex: 1;
-    margin: 10px;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.stat-item h3 {
-    font-size: 2rem;
-    color: var(--primary-color);
-    margin-bottom: 10px;
-}
-
-.stat-item p {
-    font-size: 1.1rem;
-    color: #555;
-}
-
-.stat-item:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-}
-
-/* Contact Us Section */
-form {
-    background: var(--white);
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-form input,
-form textarea {
-    width: 100%;
-    padding: 15px;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    font-size: 1rem;
-    background: #fafafa;
-}
-
-form button {
-    width: 100%;
-    padding: 15px;
-    background: var(--primary-color);
-    color: var(--white);
-    border-radius: 50px;
-    border: none;
-    font-size: 1.1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-form button:hover {
-    background: var(--accent-color);
-}
-
-/* Footer */
-footer {
-    background: var(--primary-color);
-    color: var(--white);
-    text-align: center;
-    padding: 30px 20px;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .hero-section {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .hero-content {
-        max-width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .project-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .stat-item {
-        margin-bottom: 20px;
-    }
-}
-
-img {
-    max-width: 100%;
-    max-height: 500px;
-    object-fit: cover;
-    border-radius: 10px;
-}
+            menuToggle.addEventListener('click', function() {
+                navLinks.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>
